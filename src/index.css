@@ -1,13 +1,335 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: roboto-light;
+  src: url("./fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: roboto-bold;
+  src: url("./fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: roboto-black;
+  src: url("./fonts/Roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: roboto-italic;
+  src: url("./fonts/Roboto/Roboto-LightItalic.ttf");
+}
+
+:root {
+  --standard-padding: 1rem;
+  --my-black: #FFB6C1;
+  --my-font: white;
+  --my-background: #2f4858;
+  --timeline-column: #ffffd0;
+  --timeline-padding: calc(75% - 10px); 
+  --timeline-left-right-pcercentage: calc(70% + 2vw);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--my-background);
+}
+
+.title {
+  font-size: calc(1rem + 13vw);
+  color: var(--my-font);
+}
+
+.title-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+}
+
+.sub-title {
+  font-size: calc(1rem + 1vw);
+}
+
+.header {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  background-color: var(--my-black);
+  position: relative;
+  height: 25px;
+}
+
+.logo-inside {
+  background-color: var(--my-black);
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border: 8px solid white;
+  border-radius: 100%;
+}
+
+.logo {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--my-black);
+  border-radius: 100%;
+}
+
+.logo::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: var(--my-black);
+  position: absolute;
+  top: -30px;
+}
+
+.sub-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  align-items: center;
+  justify-items: center;
+  color: var(--my-font);
+}
+
+.sub-header-left {
+  width: 100%;
+  height: 6vmax;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.sub-header-left-p:nth-child(1) {
+  font-size: calc(1rem + 2.5vw);
+  font-family: roboto-black;
+}
+
+.sub-header-left-p:nth-child(2) {
+  font-size: calc(1rem + 1vw);
+  font-family: roboto-light;
+}
+
+.sub-header-right {
+  font-size: calc(1rem + 1vw);
+  width: 100%;
+  text-align: start;
+  display: flex;
+  align-items:end;
+  height: 6vmax;
+  font-family: roboto-italic;
+}
+
+.decoration {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0rem;
+}
+
+.deco:nth-child(1) {
+  width: 2px;
+  height: 13vmax;
+  background-image: linear-gradient(to bottom, var(--my-black) 0%, var(--my-background) 80%);
+}
+
+.deco:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.deco:nth-child(2) > div {
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/sun-svgrepo-com.png");
+  /* background-image: url("https://www.svgrepo.com/show/390804/sun-moon-eclipse.svg"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  padding: var(--standard-padding);
+}
+
+.li-inner-content {
+  
+}
+
+.content-ul {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: roboto-bold;
+}
+
+.content-li {
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-outer-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  max-width: 800px;
+  width: 100%;
+  justify-items: center;
+}
+
+.timeline-li {
+  border: 20px solid #0000;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: -20px;
+  position: relative;
+}
+
+.timeline-left {
+  grid-column: 1/5;
+  background:
+  linear-gradient(var(--my-black) 0 0) content-box,
+  linear-gradient(var(--c, var(--my-background)) 0 0) padding-box,
+  linear-gradient(var(--d, 90deg), #0000 var(--timeline-padding), var(--timeline-column) 0) border-box;
+  
+}
+
+.timeline-right {
+  grid-column: 4/8;
+  background:
+  linear-gradient(var(--my-black) 0 0) content-box,
+  linear-gradient(var(--c, var(--my-background)) 0 0) padding-box,
+  linear-gradient(var(--d, -90deg), #0000 var(--timeline-padding), var(--timeline-column) 0) border-box;
+}
+
+.timeline-date {
+  font-family: roboto-italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: var(--my-font);
+  font-size: calc(5px + 1vw);
+}
+
+.timeline-date-left {
+  left: var(--timeline-left-right-pcercentage);
+}
+
+.timeline-date-right {
+  right: var(--timeline-left-right-pcercentage);
+}  
+
+.timeline-repeated-line {
+  position: absolute;
+  height: 10px;
+  width: 75px;
+  background: repeating-linear-gradient(-90deg, var(--my-background) 0 5px, #0000 0 10px) 50%/100% 2px no-repeat;
+}
+
+.timeline-p {
+
+}
+
+.timeline-title {
+  padding: 1rem 1rem 0 1rem;
+  font-size: calc(10px + 1vw);
+  font-family: roboto-bold;
+  text-align: center;
+}
+
+.timeline-content {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  font-family: roboto-light;
+  font-size: calc(8px + 1vw);
+  display: grid;
+  grid-template-columns: 5px 1fr 5px;
+}
+
+.timeline-content > p{
+  grid-column: 2/3;
+}
+
+.timeline-img-container {
+  display: block;
+  width: 100%;
+  height: calc(120px + 5vw);
+  color: transparent;
+  position: relative;
+}
+
+.timeline-img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://img.freepik.com/free-photo/free-photo-ramadan-kareem-eid-mubarak-royal-elegant-lamp-with-mosque-holy-gate-with-fireworks_1340-23597.jpg?w=1060&t=st=1708441297~exp=1708441897~hmac=36058d66a937af596b07aa20297a5d6376d38baf3d2e32ddad8d0fcede8f651d");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hr-line-container {
+  position: relative;
+  margin: 1rem;
+  height: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.hr-line {
+  background-image: linear-gradient(to right, var(--my-black) 0%, var(--my-background) 90%);
+  width: 100%;
+  height: 2px;
+}
+
+.line-dot {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: pink;
+  left: calc(1rem + 1vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: movingDot 4s infinite forwards cubic-bezier(.85,0,.25,1);
+}
+
+
+@keyframes movingDot {
+  0%, 70% {
+    transform: translate(0);
+  }
+  35% {
+    transform: translate(calc(1rem + 5vw));
+  }
 }
