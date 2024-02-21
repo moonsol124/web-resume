@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 export default function Timeline(props) {
     return (
         <div className="timeline-container">
+            <div className="timeline-arrow"></div>
             <ul className="timeline-outer-container">
                 {props.list.map((e, index) => {
                     return (

@@ -1,17 +1,18 @@
 import Timeline from './timeline';
-import Work from './work';
+import Portfolio from './portfolio';
 import { useState, useEffect } from "react";
 import highschool from '../images/highschool.png';
 import unam from '../images/unam.png';
 import fontys from '../images/fontys.png';
 import baby from '../images/baby.png';
-import elm from '../images/elm.png';
 import mid from '../images/mid.png';
-import high from '../images/high.png';
 import mil from '../images/mil.png';
 import me from '../images/1.png';
 import kid from '../images/kid.png';
 import job from '../images/job.png';
+import pizza from "../images/pizza_app.png";
+import ecommerce from "../images/e_commerce_app.png";
+import blog from "../images/blog_app.png";
 
 export default function ContentList(props) {
     const [educations, setEducations] = useState([
@@ -21,14 +22,22 @@ export default function ContentList(props) {
         ]);
 
     const [works, setWorks] = useState([
-        {name: "", date: "Dec 28, 1994", title: 'Professional Parasite', description: 'I When I was working at "My Mother\'s womb", my role was Professional Parasite.', img: baby},
-        {name: "", date: "1994 - 2000", title: 'Rice Tasting Specialist', description: 'My role during this period was about eating all rice cakes in family gatherings. I led a team of 10 professionals skilled in preparing gourmet rice.', img: kid},
+        {name: "", date: "1994 - 2000", title: 'Rice Tasting Specialist', description: 'My role during this period was eating all rice cakes in family gatherings. I led a team of 10 professionals skilled in preparing gourmet rice.', img: kid},
         {name: "", date: "2000 - 2012", title: 'Nap Specialist', description: 'I tested all different kinds of sleeping methods at "My mom yelling at me cause I got bad scores in exams and in the meantime her best friend\'s son got into the top uni". My role was doing a research of those strategies and delivering an effective marketing strategy to the company.', img: mid},
-        {name: "", date: "2012 - 2016", title: 'Analog Nomad', description: 'Professional analog Nomad who\'s role was about conquering hostels as cheap as possible.', img: me},
+        {name: "", date: "2012 - 2016", title: 'Analog Nomad', description: 'Professional analog Nomad who\'s role is conquering hostels as cheap as possible.', img: me},
         {name: "", date: "2016 - 2018", title: 'Can\'t believe that I\'ve actually done this', description: 'A professional tax-waster but whatever. They forced me anyway!', img: mil},
-        {name: "", date: "2018 - ongoing", title: 'Jobless', description: 'Yes. I have ZERO experience in real-world as you might already have guessed but still wanted to add something to my web-resume to make it look nicer and fuller!', img: job},    
+        {name: "", date: "2018 - ongoing", title: 'Jobless', description: '"..."', img: job},    
     ]);
     
+    const  [portfolio, setPortfolio] = useState([
+        {id: 1, name: "Mario & Luigis", url: "https://moonsol124.github.io/School-restaurant-page/", css: "front", img: pizza},
+        {id: 2, name: "E-Commerce App", url: "https://moonsol124.github.io/e-commerce-website/", css: "back", img: blog},
+        {id: 3, name: "Blog", url: "https://moonsol124.github.io/blog-app/", css: "right", img: ecommerce},
+        {id: 4, name: "", url: null, css: "left", img: null},
+        {id: 5, name: "", url: null, css: "top", img: null},
+        {id: 6, name: "", url: null, css: "bottom", img: null},
+    ])
+
     const [id, setId] = useState("");
     const [isToggled, setIsToggled] = useState(true);
     const toggle = () => {
@@ -46,6 +55,7 @@ export default function ContentList(props) {
             <div className="li-inner-content">
                 {(id === "education"?<Timeline list={educations}/>:null)}
                 {(id === "work"?<Timeline list={works}/>:null)}
+                {(id === "portfolio"?<Portfolio portfolio={portfolio} />:null)}
             </div>
             }
         </li>
