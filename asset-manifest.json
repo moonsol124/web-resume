@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web-resume/static/css/main.9d0fee82.css",
-    "main.js": "/web-resume/static/js/main.14dd23af.js",
+    "main.js": "/web-resume/static/js/main.be15e579.js",
     "static/js/453.81732074.chunk.js": "/web-resume/static/js/453.81732074.chunk.js",
     "static/media/pizza_app.png": "/web-resume/static/media/pizza_app.e81faf8e6fa5dbe05499.png",
     "static/media/blog_app.png": "/web-resume/static/media/blog_app.d7b8855eeae660007733.png",
@@ -13,6 +13,7 @@
     "static/media/job.png": "/web-resume/static/media/job.2ad4a0cbab04daa5d3b0.png",
     "static/media/1.png": "/web-resume/static/media/1.78c6942877f0b63e01cc.png",
     "static/media/unam.png": "/web-resume/static/media/unam.1623795b37adf2aa2358.png",
+    "static/media/waffel.png": "/web-resume/static/media/waffel.6259b6b2833d03138bf3.png",
     "static/media/kid.png": "/web-resume/static/media/kid.c8b105ca3ab365ff4467.png",
     "static/media/react.png": "/web-resume/static/media/react.1a3baeb20f65f79b25bf.png",
     "static/media/Roboto-LightItalic.ttf": "/web-resume/static/media/Roboto-LightItalic.c590382422f2742d788b.ttf",
@@ -32,11 +33,11 @@
     "static/media/sun-svgrepo-com.png": "/web-resume/static/media/sun-svgrepo-com.30e30456881a27a540eb.png",
     "index.html": "/web-resume/index.html",
     "main.9d0fee82.css.map": "/web-resume/static/css/main.9d0fee82.css.map",
-    "main.14dd23af.js.map": "/web-resume/static/js/main.14dd23af.js.map",
+    "main.be15e579.js.map": "/web-resume/static/js/main.be15e579.js.map",
     "453.81732074.chunk.js.map": "/web-resume/static/js/453.81732074.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d0fee82.css",
-    "static/js/main.14dd23af.js"
+    "static/js/main.be15e579.js"
   ]
 }
