@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+html {
+  background-color: var(--my-background);
+}
+
 @font-face {
   font-family: roboto-light;
   src: url("./fonts/Roboto/Roboto-Light.ttf");
@@ -47,6 +51,7 @@ ul {
 .title {
   font-size: calc(1rem + 13vw);
   color: var(--my-font);
+  cursor: pointer;
 }
 
 .title-underline {
@@ -204,12 +209,35 @@ ul {
   margin-bottom: calc(1rem + 1vw);
   animation: shiningArrow 2s infinite ease-in-out;
 }
+/* changing the pointers, adding some animations */
+
 .timeline-container {
   padding: 1rem 0 1rem 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.timeline-container::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  animation: expand 2s ease-in-out forwards;
+}
+
+@keyframes expand {
+  0% {
+    background-color: var(--my-background);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  100% {
+    background-color: var(--my-background);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
 }
 
 .timeline-outer-container {
@@ -412,6 +440,7 @@ ul {
   width: 100%;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .button {
@@ -424,6 +453,7 @@ ul {
   border-radius: 10px;
   font-size: 1rem;
   background-color: var(--my-black);
+  cursor: pointer;
 }
 
 .button:active {
@@ -529,6 +559,15 @@ ul {
   display: flex;
   justify-content: center;
   padding-top: 1rem;
+}
+
+.skill-container::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  animation: expand 2s ease-in-out forwards;
 }
 
 .skill-ul {

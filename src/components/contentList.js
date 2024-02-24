@@ -24,7 +24,7 @@ import docker from '../images/docker.png';
 import react from '../images/react.png';
 import asp from '../images/asp.png';
 import myCShop from '../images/myCShop.png';
-
+import waffel from '../images/waffel.png'
     // js, python, c#, react, css, devop, asp.net, elm, node, docker
 
 export default function ContentList(props) {
@@ -43,11 +43,12 @@ export default function ContentList(props) {
         ]);
 
     const [works, setWorks] = useState([
-        {name: "", date: "1994 - 2000", title: 'Rice Tasting Specialist', description: 'My role during this period was eating all rice cakes in family gatherings. I led a team of 10 professionals skilled in preparing gourmet rice.', img: kid},
+        {name: "", date: "1994 - 2000", title: 'Rice Tasting Specialist', description: 'My role during this period was eating all rice cakes in family gatherings. I led a team of 10 professionals skilled in preparing rice specialities.', img: kid},
         {name: "", date: "2000 - 2012", title: 'Nap Specialist', description: 'I tested all different kinds of sleeping methods at "My mom yelling at me cause I got bad scores in exams and in the meantime her best friend\'s son got into the top uni". My role was doing a research of those strategies and delivering an effective marketing strategy to the company.', img: mid},
         {name: "", date: "2012 - 2016", title: 'Analog Nomad', description: 'Professional analog Nomad who\'s role is conquering hostels as cheap as possible.', img: me},
         {name: "", date: "2016 - 2018", title: 'Can\'t believe that I\'ve actually done this', description: 'A professional tax-waster but whatever. They forced me anyway!', img: mil},
-        {name: "", date: "2018 - ongoing", title: 'Jobless', description: '"..."', img: job},    
+        {name: "", date: "2020 - 2023", title: 'Champion Stroopwafel Gourmet', description: 'I was a champion stroopwafel gourmet who has won multiple competitions, But all I know is that AH Stroopwafels are the best. (disclaimer: Not sponsored!)', img: waffel},
+        {name: "", date: "2023 - ongoing", title: 'Jobless', description: 'My linkedin feels sooo empty.....', img: job},    
     ]);
     
     const  [portfolio, setPortfolio] = useState([
@@ -86,7 +87,7 @@ export default function ContentList(props) {
         <li className="content-li" key={props.index}>
             <p className="title" onClick={toggle}><span className="title-underline">{props.element.title}</span></p>
             {(isToggled)?null:
-            <div className="li-inner-content">
+            <div className="il-inner-content">
                 {(id === "education"?<Timeline list={educations}/>:null)}
                 {(id === "work"?<Timeline list={works}/>:null)}
                 {(id === "portfolio"?<Portfolio portfolio={portfolio} />:null)}
