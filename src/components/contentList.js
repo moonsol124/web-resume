@@ -25,7 +25,7 @@ import react from '../images/react.png';
 import asp from '../images/asp.png';
 import myCShop from '../images/myCShop.png';
 import waffel from '../images/waffel.png'
-    // js, python, c#, react, css, devop, asp.net, elm, node, docker
+import Resume from './pdf';
 
 export default function ContentList(props) {
     const generatedList = (int) => {
@@ -92,6 +92,7 @@ export default function ContentList(props) {
                 {(id === "work"?<Timeline list={works}/>:null)}
                 {(id === "portfolio"?<Portfolio portfolio={portfolio} />:null)}
                 {(id === "skill"?<Skill skills={skills}/>:null)}
+                {(id === "resume"?<Resume />:null)}
             </div>
             }
         </li>

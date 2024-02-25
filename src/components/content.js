@@ -6,7 +6,8 @@ export default function Content() {
         {title: "Education", id:"education"},
         {title: "Work", id:"work"},
         {title: "Portfolio", id:"portfolio"},
-        {title: "Skills", id:"skill"}]
+        {title: "Skills", id:"skill"},
+        {title: "Resume", id:"resume"}]
     );
 
     return (
