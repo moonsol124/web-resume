@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/web-resume/static/css/main.9d0fee82.css",
-    "main.js": "/web-resume/static/js/main.59f52723.js",
+    "main.js": "/web-resume/static/js/main.f1d59a6a.js",
     "static/js/453.81732074.chunk.js": "/web-resume/static/js/453.81732074.chunk.js",
-    "static/media/sol_moon.pdf": "/web-resume/static/media/sol_moon.459e48a0f8b7cbfafdbc.pdf",
+    "static/media/sol_moon.pdf": "/web-resume/static/media/sol_moon.a3b33a732d4c2cb69ea1.pdf",
     "static/media/pizza_app.png": "/web-resume/static/media/pizza_app.e81faf8e6fa5dbe05499.png",
     "static/media/blog_app.png": "/web-resume/static/media/blog_app.d7b8855eeae660007733.png",
     "static/media/e_commerce_app.png": "/web-resume/static/media/e_commerce_app.7174da25da9995f42c9a.png",
@@ -34,11 +34,11 @@
     "static/media/sun-svgrepo-com.png": "/web-resume/static/media/sun-svgrepo-com.30e30456881a27a540eb.png",
     "index.html": "/web-resume/index.html",
     "main.9d0fee82.css.map": "/web-resume/static/css/main.9d0fee82.css.map",
-    "main.59f52723.js.map": "/web-resume/static/js/main.59f52723.js.map",
+    "main.f1d59a6a.js.map": "/web-resume/static/js/main.f1d59a6a.js.map",
     "453.81732074.chunk.js.map": "/web-resume/static/js/453.81732074.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d0fee82.css",
-    "static/js/main.59f52723.js"
+    "static/js/main.f1d59a6a.js"
   ]
 }
